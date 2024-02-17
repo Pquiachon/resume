@@ -74,6 +74,20 @@
         background-size: cover;
         background-position: center top;
       }
+      #bg7 {
+        height: 100vh;
+        min-width: 100%;
+        background: url(img/educ1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center top;
+      }
+      #bg8 {
+        height: 100vh;
+        min-width: 100%;
+        background: url(img/educ2.jpg) no-repeat fixed;
+        background-size: cover;
+        background-position: center top;
+      }
       .navbar {
         background-color: rgba(40, 38, 35, 0.757);
         position: fixed;
@@ -119,7 +133,62 @@
         background-color: rgba(0, 0, 0, 0.7);
         margin: 10%;
       }
+      .education-container {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+      }
+      .education2-container {
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        text-align: end;
+      }
+      .education-container h1 {
+        font-size: 6.5dvh;
+        margin: 5px;
+      }
+      .education-text {
+        background-color: rgba(0, 0, 0, 0.7);
+        margin: 10%;
+      }
+      #educ-text {
+        font-size: 2.6dvh;
+        color: white;
+      }
 
+      @media screen and (min-width: 771px) {
+        .educ-text {
+          text-align: right;
+          width: 90dvh;
+          margin-bottom: 10dvw;
+          margin-right: 10dvw;
+          margin-left: 10dvw;
+
+          background-color: rgba(0, 0, 0, 0.7);
+        }
+      }
+      .educ-text {
+        text-align: center;
+        width: 90dvh;
+        margin-bottom: 10dvw;
+        margin-right: 10dvw;
+        margin-left: 10dvw;
+
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+      @media screen and (max-width: 770px) {
+        .educ-text {
+          width: 80dvw;
+
+          background-color: rgba(0, 0, 0, 0.7);
+        }
+        #educ2-text {
+          font-size: 2dvh;
+          color: white;
+        }
+      }
       h1 {
         display: block;
         margin: 4rem;
@@ -177,7 +246,7 @@
               <a class="nav-link nav-text" href="#bg2">Experience</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-text" href="#bg4">Education</a>
+              <a class="nav-link nav-text" href="#bg7">Education</a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-text" href="#">Skills</a>
@@ -319,25 +388,71 @@
         <div class="col experience-text">
           <h2>Full-Stack Web Developer</h2>
           <ul class="list-unstyled">
-            <p>January 2023 - November 2023</p>
+            <p>November 2023 - February 2024</p>
             <p>KodeGo</p>
             <p>Remote</p>
             <p>
-              Monitor, review, and process claims in a timely and accurate
-              manner. Claims Specialist logs the client information, verify
-              coverage and detemines allowable benefits or compensation. Calling
-              insurance in the medical field getting paid or denial check,
-              checking portal claim for patient's claim if covered or not. We
-              process medical records and appeal form to get patient's claims
-              covered by their insurance/s. Once covered, we counter check the
-              payment to know if the said benefits were covered correctly.
+              I successfully completed an intensive Full-Stack Web Development
+              Bootcamp, where I honed proficiency in a range of programming
+              languages and frameworks including HTML, CSS, JavaScript, SQL,
+              Laravel, and other relevant tools. Independently, I developed the
+              SHOP I.O project, showcasing strong skills in HTML and CSS.
+              Additionally, I collaborated on the creation of the Fit Flex
+              project with a colleague, demonstrating expertise in Express API,
+              data handling, and incorporating design elements. Furthermore, I
+              contributed to the development of Halukay, an E-commerce website,
+              by collaborating with peers on database design. My efforts during
+              the bootcamp were recognized, as I won the award for Best in
+              Capstone project, reflecting my dedication and excellence in web
+              development.
             </p>
           </ul>
         </div>
       </div>
     </div>
-    <div class="container" id="bg7">
-      <div class="row"></div>
+    <div class="container container-fluid education-container" id="bg7">
+      <div class="row">
+        <div class="col-lg-4 col-10 education-text">
+          <h2>Senior High School</h2>
+          <ul class="list-unstyled">
+            <p id="educ-text">La Consolacion College - Binan</p>
+            <p id="educ-text">
+              I graduated from La Consolacion College - Binan with a senior high
+              school diploma, specializing in STEM (Science, Technology,
+              Engineering, and Mathematics). Throughout my academic journey, I
+              developed a strong foundation in these disciplines, honing my
+              analytical skills and problem-solving abilities. The rigorous
+              curriculum equipped me with the necessary knowledge and expertise
+              to approach complex challenges with confidence and adaptability.
+            </p>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container container-fluid education2-container" id="bg8">
+      <div class="row mt-5">
+        <div class="educ-text">
+          <h2>Full-Stack Web Developer</h2>
+          <ul class="list-unstyled">
+            <p id="educ2-text">KodeGo</p>
+            <p id="educ2-text">
+              I successfully completed an intensive Full-Stack Web Development
+              Bootcamp, where I honed proficiency in a range of programming
+              languages and frameworks including HTML, CSS, JavaScript, SQL,
+              Laravel, and other relevant tools. Independently, I developed the
+              SHOP I.O project, showcasing strong skills in HTML and CSS.
+              Additionally, I collaborated on the creation of the Fit Flex
+              project with a colleague, demonstrating expertise in Express API,
+              data handling, and incorporating design elements. Furthermore, I
+              contributed to the development of Halukay, an E-commerce website,
+              by collaborating with peers on database design. My efforts during
+              the bootcamp were recognized, as I won the award for Best in
+              Capstone project, reflecting my dedication and excellence in web
+              development.
+            </p>
+          </ul>
+        </div>
+      </div>
     </div>
   </body>
 </html>
