@@ -16,6 +16,10 @@
       href="https://fonts.googleapis.com/css2?family=Exo&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
     <style>
       html {
@@ -215,7 +219,7 @@
       .btn {
         color: aqua;
         border-color: aqua;
-
+        background-color: black;
         margin: auto 5px;
       }
       .list-unstyled {
@@ -224,6 +228,7 @@
       .card {
         margin: 5% 0 5% 0;
         border-color: black;
+        background-color: black;
       }
       .card-title {
         text-align: center;
@@ -235,6 +240,49 @@
       }
       .card-body {
         background-color: rgba(0, 0, 0, 0.885);
+      }
+      .images {
+        border-radius: 1rem;
+        transition: transform 0.3s ease;
+      }
+
+      .images:hover {
+        transform: scale(1.1);
+      }
+      footer {
+        background-color: black;
+      }
+      .form-control {
+        background-color: rgba(0, 0, 0, 0.7);
+        border-color: aqua;
+        min-width: 100%;
+        color: white;
+      }
+      .form-control:focus {
+        background-color: black;
+      }
+      form {
+        min-width: 100%;
+      }
+      label {
+        color: white;
+        margin: 8px;
+      }
+      input {
+        color: white;
+      }
+      /* ul li i {
+        text-decoration: none;
+        color: white;
+        margin: 5%;
+        width: 20px;
+      } */
+      sup {
+        color: white;
+        font-size: 18px;
+      }
+      i .icon {
+        width: 180px;
       }
     </style>
 
@@ -272,7 +320,7 @@
               <a class="nav-link nav-text" href="#bg7">Education</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-text" href="#">Skills</a>
+              <a class="nav-link nav-text" href="#skills">Skills</a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-text" href="#">Contact</a>
@@ -294,8 +342,8 @@
             excited to utilize my skills to develop innovative web experiences.
             Glad to have you here!
           </p>
-          <a href="" class="btn btn-outline-dark">Hire me!</a>
-          <a href="" class="btn btn-outline-dark">About me</a>
+          <a href="#hireme" class="btn btn-outline-dark">Hire me!</a>
+          <a href="#bg2" class="btn btn-outline-dark">About me</a>
         </div>
       </div>
     </div>
@@ -481,55 +529,160 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid skills">
-      <div class="row justify-content-center">
+    <div class="container-fluid skills" id="skills">
+      <div class="row">
         <div class="col-md-4">
-          <div class="card mb-4">
-            <a href="https://pquiachon.github.io/MP1/" target="_blank">
-              <img
-                src="img/MP1.png"
-                class="card-img-top"
-                alt="jgm-website-photo"
-              />
-              <div class="card-body">
-                <h1 class="card-title">SHOP I.O</h1>
-                <p class="card-text">
-                  Ecommerce website design built using the combination of HTML,
-                  CSS, and Bootstrap
-                </p>
-              </div>
-            </a>
+          <div class="card mb-5 mt-5">
+            <img
+              src="img/MP1.png"
+              class="card-img-top images"
+              alt="jgm-website-photo"
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Ecommerce website design built using the combination of HTML,
+                CSS, and Bootstrap
+              </p>
+            </div>
+            <a
+              href="https://pquiachon.github.io/MP1/"
+              target="_blank"
+              class="btn"
+              >SHOP I.O</a
+            >
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card mb-4">
-            <a href="https://pquiachon.github.io/MP2/" target="_blank">
-              <img src="img/MP2.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h1 class="card-title">Fit Flex</h1>
-                <p class="card-text">
-                  Fitness website that demonstrating expertise in Express API,
-                  data handling, and incorporating design elements.
-                </p>
-              </div>
-            </a>
+          <div class="card mb-4 mt-5">
+            <img src="img/MP2.png" class="card-img-top images" alt="..." />
+            <div class="card-body">
+              <p class="card-text">
+                Fitness website that demonstrating expertise in Express API,
+                data handling, and incorporating design elements.
+              </p>
+            </div>
+            <a
+              href="https://pquiachon.github.io/MP2/"
+              target="_blank"
+              class="btn"
+              >FITFLEX</a
+            >
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card mb-4">
-            <a href="https://halukay.onrender.com/" target="_blank">
-              <img src="img/capstone.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h1 class="card-title">Halukay</h1>
-                <p class="card-text">
-                  Collaborated with peers on the development of Halukay, an
-                  E-commerce website, contributing to database design.
-                </p>
-              </div>
-            </a>
+          <div class="card mb-4 mt-5">
+            <img src="img/capstone.png" class="card-img-top images" alt="..." />
+            <div class="card-body">
+              <p class="card-text">
+                Collaborated with peers on the development of Halukay, an
+                E-commerce website, contributing to database design.
+              </p>
+            </div>
+
+            <a href="https://halukay.onrender.com/" target="_blank" class="btn"
+              >HALUKAY</a
+            >
           </div>
         </div>
       </div>
     </div>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4">
+            <h1 class="text-center fs-1 mb-0 pb-0 mt-5" id="hireme">HIRE ME</h1>
+            <form
+              name="contact-form"
+              method="POST"
+              action="https://formspree.io/f/xzbnrkjk"
+            >
+              <div class="form-group">
+                <label for="name">Full Name</label><br />
+                <input
+                  class="form-control"
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="John Dela Cruz"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email-address">Email Address</label><br />
+                <input
+                  class="form-control"
+                  type="email"
+                  id="email-address"
+                  name="email"
+                  placeholder="example@email.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="comment">Message</label><br />
+                <textarea
+                  class="form-control"
+                  id="comment"
+                  name="message"
+                  rows="4"
+                  cols="50"
+                  placeholder="Type your message here..."
+                ></textarea>
+              </div>
+              <button type="submit" class="btn mt-2 mb-5" value="Send">
+                Submit
+              </button>
+              <button type="reset" class="btn mt-2 mb-5">Reset</button>
+            </form>
+          </div>
+          <div
+            class="col-md-4 mt-5 d-flex align-items-center justify-content-center flex-column"
+          >
+            <img
+              src="img/profile.jpg"
+              style="
+                border-radius: 50%;
+                max-width: 40%;
+                padding: 5px;
+                border: solid 2px aqua;
+              "
+            />
+            <div>
+              <p class="mt-3 pt-0 text-center">JOHN PAUL QUIACHON</p>
+              <h1 class="mt-0 pt-0 fs-4">Web Developer</h1>
+            </div>
+          </div>
+
+          <div class="col-md-4 mt-5">
+            <p class="text-uppercase">Connect With Me</p>
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://www.linkedin.com/jlandoay" target="_blank"
+                  ><i class="ri-linkedin-box-fill icon"></i>
+                  <sup>linkedin.com/in/jlandoay</sup></a
+                >
+              </li>
+              <li>
+                <a href="https://www.facebook.com/epiclarkis" target="_blank"
+                  ><i class="fab fa-facebook-square"></i>
+                  <sup>facebook.com/epiclarkis</sup></a
+                >
+              </li>
+              <li>
+                <a href="https://www.twitter.com/epiclarkis" target="_blank"
+                  ><i class="fab fa-twitter-square"></i> <sup>@larkisen</sup></a
+                >
+              </li>
+              <li>
+                <a href="https://www.instagram.com/epiclarkis" target="_blank"
+                  ><i class="fab fa-instagram"></i> <sup>@epiclarkis</sup></a
+                >
+              </li>
+            </ul>
+            <p>
+              Want one like this? <span class="text-primary">Let's talk!</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
