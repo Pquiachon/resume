@@ -23,6 +23,7 @@
       }
       body {
         font-family: "Exo", sans-serif;
+        background-color: black;
       }
       #webname {
         text-decoration: none;
@@ -85,6 +86,13 @@
         height: 100vh;
         min-width: 100%;
         background: url(img/educ2.jpg) no-repeat fixed;
+        background-size: cover;
+        background-position: center top;
+      }
+      #bg9 {
+        height: 100vh;
+        min-width: 100%;
+        background: url(img/skills.jpg) no-repeat;
         background-size: cover;
         background-position: center top;
       }
@@ -212,6 +220,21 @@
       }
       .list-unstyled {
         color: white;
+      }
+      .card {
+        margin: 5% 0 5% 0;
+        border-color: black;
+      }
+      .card-title {
+        text-align: center;
+        font-size: 2.5vw;
+        margin-top: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      .card-body {
+        background-color: rgba(0, 0, 0, 0.885);
       }
     </style>
 
@@ -455,6 +478,56 @@
               development.
             </p>
           </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid skills">
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <a href="https://pquiachon.github.io/MP1/" target="_blank">
+              <img
+                src="img/MP1.png"
+                class="card-img-top"
+                alt="jgm-website-photo"
+              />
+              <div class="card-body">
+                <h1 class="card-title">SHOP I.O</h1>
+                <p class="card-text">
+                  Ecommerce website design built using the combination of HTML,
+                  CSS, and Bootstrap
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <a href="https://pquiachon.github.io/MP2/" target="_blank">
+              <img src="img/MP2.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h1 class="card-title">Fit Flex</h1>
+                <p class="card-text">
+                  Fitness website that demonstrating expertise in Express API,
+                  data handling, and incorporating design elements.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <a href="https://halukay.onrender.com/" target="_blank">
+              <img src="img/capstone.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h1 class="card-title">Halukay</h1>
+                <p class="card-text">
+                  Collaborated with peers on the development of Halukay, an
+                  E-commerce website, contributing to database design.
+                </p>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
