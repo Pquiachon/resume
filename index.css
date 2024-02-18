@@ -1,0 +1,260 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Exo", sans-serif;
+  background-color: black;
+}
+#webname {
+  text-decoration: none;
+  color: white;
+  font-size: 2dvw;
+  font-style: italic;
+}
+#bg1 {
+  height: 100vh;
+  min-width: 100%;
+  display: flex;
+  background: url(img/aboutme.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+#bg2 {
+  height: 100vh;
+  min-width: 100%;
+  display: flex;
+  background: url(img/myexperience.jpeg) no-repeat fixed;
+  background-size: cover;
+  background-position: top;
+}
+#bg3 {
+  height: 100vh;
+  min-width: 100%;
+  background: url(img/teletech.jfif) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#bg4 {
+  height: 100vh;
+  min-width: 100%;
+  background: url(img/valor.jpg) no-repeat fixed;
+  background-size: cover;
+  background-position: center top;
+}
+#bg5 {
+  height: 100vh;
+  min-width: 100%;
+  background: url(img/asc.jpg) no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+#bg6 {
+  height: 100vh;
+  min-width: 100%;
+  background: url(img/myskills.avif) no-repeat fixed;
+  background-size: cover;
+  background-position: center top;
+}
+#bg7 {
+  height: 100vh;
+  min-width: 100%;
+  background: url(img/educ1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+#bg8 {
+  height: 100vh;
+  min-width: 100%;
+  background: url(img/educ2.jpg) no-repeat fixed;
+  background-size: cover;
+  background-position: center top;
+}
+#bg9 {
+  height: 100vh;
+  min-width: 100%;
+  background: url(img/skills.jpg) no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+.navbar {
+  background-color: rgba(40, 38, 35, 0.757);
+  position: fixed;
+  min-width: 100%;
+  z-index: 10;
+}
+.nav-link {
+  color: white;
+  font-size: 15px;
+}
+.nav-link:hover {
+  color: aqua;
+  cursor: pointer;
+  border-top: 2px solid aqua;
+  border-bottom: 2px solid aqua;
+}
+#name {
+  float: left;
+  color: white;
+}
+.active {
+  font-weight: 500;
+  border-top: 2px solid aqua;
+  border-bottom: 2px solid aqua;
+  color: aqua !important;
+}
+
+.aboutme-container,
+.experience-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.aboutme-container h1 {
+  font-size: 6.5dvh;
+  margin: 5px;
+}
+.experience-container h1 {
+  font-size: 5dvh;
+  margin: 5px;
+}
+.about-text,
+.experience-text {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 10%;
+}
+.education-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-align: start;
+}
+.education2-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  text-align: end;
+}
+.education-container h1 {
+  font-size: 6.5dvh;
+  margin: 5px;
+}
+.education-text {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 10%;
+}
+#educ-text {
+  font-size: 2dvh;
+  color: white;
+}
+
+@media screen and (min-width: 771px) {
+  .educ2-text {
+    width: 90dvh;
+    margin-bottom: 10dvw;
+    margin-right: 10dvw;
+    margin-left: 10dvw;
+
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+.educ-text {
+  width: 90dvh;
+  margin-bottom: 10dvw;
+  margin-right: 10dvw;
+  margin-left: 10dvw;
+
+  background-color: rgba(0, 0, 0, 0.7);
+}
+@media screen and (max-width: 770px) {
+  .educ-text {
+    width: 80dvw;
+
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  #educ2-text {
+    font-size: 2dvh;
+    color: white;
+  }
+}
+h1 {
+  display: block;
+  margin: 4rem;
+  color: aqua;
+}
+h2 {
+  display: block;
+
+  color: aqua;
+}
+
+p {
+  font-size: 2dvh;
+  color: white;
+}
+.btn {
+  color: aqua;
+  border-color: aqua;
+  background-color: black;
+  margin: auto 5px;
+}
+.list-unstyled {
+  color: white;
+}
+.card {
+  margin: 5% 0 5% 0;
+  border-color: black;
+  background-color: black;
+}
+.card-title {
+  text-align: center;
+  font-size: 2.5vw;
+  margin-top: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.card-body {
+  background-color: rgba(0, 0, 0, 0.885);
+}
+.images {
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.images:hover {
+  transform: scale(1.1);
+}
+footer {
+  background-color: black;
+}
+.form-control {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-color: aqua;
+  min-width: 100%;
+  color: white;
+}
+.form-control:focus {
+  background-color: black;
+}
+form {
+  min-width: 100%;
+}
+label {
+  color: white;
+  margin: 8px;
+}
+input {
+  color: white;
+}
+sup {
+  color: white;
+  font-size: 18px;
+}
+.list-unstyled a i {
+  font-size: 24px;
+}
+a:hover {
+  color: aqua;
+}

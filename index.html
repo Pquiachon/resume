@@ -20,275 +20,34 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="index.css" />
 
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: "Exo", sans-serif;
-        background-color: black;
-      }
-      #webname {
-        text-decoration: none;
-        color: white;
-        font-size: 2dvw;
-        font-style: italic;
-      }
-      #bg1 {
-        height: 100vh;
-        min-width: 100%;
-        display: flex;
-        background: url(img/aboutme.jpeg) no-repeat;
-        background-size: cover;
-        background-position: center bottom;
-      }
-      #bg2 {
-        height: 100vh;
-        min-width: 100%;
-        display: flex;
-        background: url(img/myexperience.jpeg) no-repeat fixed;
-        background-size: cover;
-        background-position: top;
-      }
-      #bg3 {
-        height: 100vh;
-        min-width: 100%;
-        background: url(img/teletech.jfif) no-repeat;
-        background-size: cover;
-        background-position: center;
-      }
-      #bg4 {
-        height: 100vh;
-        min-width: 100%;
-        background: url(img/valor.jpg) no-repeat fixed;
-        background-size: cover;
-        background-position: center top;
-      }
-      #bg5 {
-        height: 100vh;
-        min-width: 100%;
-        background: url(img/asc.jpg) no-repeat;
-        background-size: cover;
-        background-position: center top;
-      }
-      #bg6 {
-        height: 100vh;
-        min-width: 100%;
-        background: url(img/myskills.avif) no-repeat fixed;
-        background-size: cover;
-        background-position: center top;
-      }
-      #bg7 {
-        height: 100vh;
-        min-width: 100%;
-        background: url(img/educ1.jpg) no-repeat;
-        background-size: cover;
-        background-position: center top;
-      }
-      #bg8 {
-        height: 100vh;
-        min-width: 100%;
-        background: url(img/educ2.jpg) no-repeat fixed;
-        background-size: cover;
-        background-position: center top;
-      }
-      #bg9 {
-        height: 100vh;
-        min-width: 100%;
-        background: url(img/skills.jpg) no-repeat;
-        background-size: cover;
-        background-position: center top;
-      }
-      .navbar {
-        background-color: rgba(40, 38, 35, 0.757);
-        position: fixed;
-        min-width: 100%;
-        z-index: 10;
-      }
-      .nav-link {
-        color: white;
-        font-size: 15px;
-      }
-      .nav-link:hover {
-        color: aqua;
-        cursor: pointer;
-        border-top: 2px solid aqua;
-        border-bottom: 2px solid aqua;
-      }
-      #name {
-        float: left;
-        color: white;
-      }
-      .active {
-        font-weight: 500;
-        color: aqua !important;
-      }
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll(".container");
+        const navLinks = document.querySelectorAll(".nav-link");
 
-      .aboutme-container,
-      .experience-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-      .aboutme-container h1 {
-        font-size: 6.5dvh;
-        margin: 5px;
-      }
-      .experience-container h1 {
-        font-size: 5dvh;
-        margin: 5px;
-      }
-      .about-text,
-      .experience-text {
-        background-color: rgba(0, 0, 0, 0.7);
-        margin: 10%;
-      }
-      .education-container {
-        display: flex;
-        justify-content: start;
-        align-items: start;
-        text-align: start;
-      }
-      .education2-container {
-        display: flex;
-        justify-content: end;
-        align-items: end;
-        text-align: end;
-      }
-      .education-container h1 {
-        font-size: 6.5dvh;
-        margin: 5px;
-      }
-      .education-text {
-        background-color: rgba(0, 0, 0, 0.7);
-        margin: 10%;
-      }
-      #educ-text {
-        font-size: 2dvh;
-        color: white;
-      }
+        window.addEventListener("scroll", function () {
+          let currentSection = "";
 
-      @media screen and (min-width: 771px) {
-        .educ2-text {
-          text-align: right;
-          width: 90dvh;
-          margin-bottom: 10dvw;
-          margin-right: 10dvw;
-          margin-left: 10dvw;
+          sections.forEach(function (section) {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+              currentSection = section.getAttribute("id");
+            }
+          });
 
-          background-color: rgba(0, 0, 0, 0.7);
-        }
-      }
-      .educ-text {
-        text-align: center;
-        width: 90dvh;
-        margin-bottom: 10dvw;
-        margin-right: 10dvw;
-        margin-left: 10dvw;
-
-        background-color: rgba(0, 0, 0, 0.7);
-      }
-      @media screen and (max-width: 770px) {
-        .educ-text {
-          width: 80dvw;
-
-          background-color: rgba(0, 0, 0, 0.7);
-        }
-        #educ2-text {
-          font-size: 2dvh;
-          color: white;
-        }
-      }
-      h1 {
-        display: block;
-        margin: 4rem;
-        color: aqua;
-      }
-      h2 {
-        display: block;
-
-        color: aqua;
-      }
-
-      p {
-        font-size: 2dvh;
-        color: white;
-      }
-      .btn {
-        color: aqua;
-        border-color: aqua;
-        background-color: black;
-        margin: auto 5px;
-      }
-      .list-unstyled {
-        color: white;
-      }
-      .card {
-        margin: 5% 0 5% 0;
-        border-color: black;
-        background-color: black;
-      }
-      .card-title {
-        text-align: center;
-        font-size: 2.5vw;
-        margin-top: 0;
-      }
-      a {
-        text-decoration: none;
-        color: white;
-      }
-      .card-body {
-        background-color: rgba(0, 0, 0, 0.885);
-      }
-      .images {
-        border-radius: 1rem;
-        transition: transform 0.3s ease;
-      }
-
-      .images:hover {
-        transform: scale(1.1);
-      }
-      footer {
-        background-color: black;
-      }
-      .form-control {
-        background-color: rgba(0, 0, 0, 0.7);
-        border-color: aqua;
-        min-width: 100%;
-        color: white;
-      }
-      .form-control:focus {
-        background-color: black;
-      }
-      form {
-        min-width: 100%;
-      }
-      label {
-        color: white;
-        margin: 8px;
-      }
-      input {
-        color: white;
-      }
-      /* ul li i {
-        text-decoration: none;
-        color: white;
-        margin: 5%;
-        width: 20px;
-      } */
-      sup {
-        color: white;
-        font-size: 18px;
-      }
-      .list-unstyled a i {
-        font-size: 24px; /* Adjust the size as needed */
-      }
-      a:hover {
-        color: aqua;
-      }
-    </style>
+          navLinks.forEach(function (link) {
+            if (link.getAttribute("href") === "#" + currentSection) {
+              link.classList.add("active");
+            } else {
+              link.classList.remove("active");
+            }
+          });
+        });
+      });
+    </script>
 
     <title>Quiachon, John Paul - Resume</title>
   </head>
@@ -315,7 +74,7 @@
         >
           <ul class="navbar-nav d-flex">
             <li class="nav-item">
-              <a class="nav-link nav-text active" href="#bg1">Home</a>
+              <a class="nav-link nav-text" href="#bg1">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-text" href="#bg2">Experience</a>
@@ -327,7 +86,7 @@
               <a class="nav-link nav-text" href="#skills">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-text" href="#">Contact</a>
+              <a class="nav-link nav-text" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -385,7 +144,11 @@
         </div>
       </div>
     </div>
-    <div class="container container-fluid experience-container" id="bg3">
+    <div
+      class="container container-fluid experience-container"
+      id="bg3"
+      id="experience"
+    >
       <div class="row">
         <div class="col experience-text">
           <h2>Customer Service Representative</h2>
@@ -443,7 +206,7 @@
             <p>January 2023 - November 2023</p>
 
             <p>ASC Strategic Revenue Solutions LLC</p>
-            <p>Remote/p></p>
+            <p>Remote</p>
             <p>
               Monitor, review, and process claims in a timely and accurate
               manner. Claims Specialist logs the client information, verify
@@ -656,10 +419,10 @@
           </div>
 
           <div class="col-md-4 mt-5">
-            <h2 class="text-start mb-4">CONNECT WITH ME</h2>
+            <h2 class="text-start mb-4" id="contact">CONNECT WITH ME</h2>
             <div class="text-start mt-5">
               <a
-                href="//https://www.facebook.com/jhnplqchn/"
+                href="https://www.facebook.com/jhnplqchn/"
                 target="_blank"
                 class="d-block mb-3"
               >
