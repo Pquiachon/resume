@@ -41,6 +41,14 @@
           navLinks.forEach(function (link) {
             if (link.getAttribute("href") === "#" + currentSection) {
               link.classList.add("active");
+            } else if (
+              link.getAttribute("href") == "#bg2" ||
+              link.getAttribute("href") == "#bg3" ||
+              link.getAttribute("href") == "#bg4" ||
+              link.getAttribute("href") == "#bg5" ||
+              link.getAttribute("href") == "#bg6"
+            ) {
+              link.classList.add("active");
             } else {
               link.classList.remove("active");
             }
@@ -86,7 +94,7 @@
               <a class="nav-link nav-text" href="#skills">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-text" href="#contact">Contact</a>
+              <a class="nav-link nav-text" href="#hireme">Contact</a>
             </li>
           </ul>
         </div>
@@ -144,16 +152,12 @@
         </div>
       </div>
     </div>
-    <div
-      class="container container-fluid experience-container"
-      id="bg3"
-      id="experience"
-    >
+    <div class="container container-fluid experience-container" id="bg3">
       <div class="row">
         <div class="col experience-text">
           <h2>Customer Service Representative</h2>
           <ul class="list-unstyled">
-            <p>February 2021 - June 2022</p>
+            <p>February 2021 - November 2023</p>
 
             <p>Teletech</p>
             <p>Robinsons Place, Santa Rosa, Laguna</p>
@@ -174,53 +178,7 @@
         </div>
       </div>
     </div>
-    <div class="container container-fluid experience-container" id="bg4">
-      <div class="row">
-        <div class="col experience-text">
-          <h2>Customer Service Representative</h2>
-          <ul class="list-unstyled">
-            <p>July 2022 - December 2022</p>
 
-            <p>Valor Global</p>
-            <p>Santa Rosa, Laguna</p>
-            <p>
-              When faced with complex situations, I rely on thorough research
-              and critical thinking to develop recommended solutions. I
-              carefully analyze the problem, considering different perspectives
-              and potential outcomes. When needed, I seek support from
-              supervisors to ensure the best possible resolution for the
-              customer. When navigating intricate challenges, my approach
-              prioritizes collaboration and effective communication, fostering a
-              supportive environment for problem-solving and customer
-              satisfaction.
-            </p>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="container container-fluid experience-container" id="bg5">
-      <div class="row">
-        <div class="col experience-text">
-          <h2>Collection Specialist</h2>
-          <ul class="list-unstyled">
-            <p>January 2023 - November 2023</p>
-
-            <p>ASC Strategic Revenue Solutions LLC</p>
-            <p>Remote</p>
-            <p>
-              Monitor, review, and process claims in a timely and accurate
-              manner. Claims Specialist logs the client information, verify
-              coverage and detemines allowable benefits or compensation. Calling
-              insurance in the medical field getting paid or denial check,
-              checking portal claim for patient's claim if covered or not. We
-              process medical records and appeal form to get patient's claims
-              covered by their insurance/s. Once covered, we counter check the
-              payment to know if the said benefits were covered correctly.
-            </p>
-          </ul>
-        </div>
-      </div>
-    </div>
     <div class="container container-fluid experience-container" id="bg6">
       <div class="row">
         <div class="col experience-text">
@@ -296,7 +254,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid skills" id="skills">
+    <div class="container container-fluid skills" id="skills">
       <div class="row">
         <div class="col-md-4">
           <div class="card mb-5 mt-5">
@@ -307,8 +265,8 @@
             />
             <div class="card-body">
               <p class="card-text">
-                Ecommerce website design built using the combination of HTML,
-                CSS, and Bootstrap
+                A solo Ecommerce website design built using the combination of
+                HTML, CSS, and Bootstrap
               </p>
             </div>
             <a
@@ -354,10 +312,10 @@
       </div>
     </div>
     <footer class="footer">
-      <div class="container-fluid">
+      <div class="container container-fluid" id="hireme">
         <div class="row">
           <div class="col-md-4">
-            <h1 class="text-center fs-1 mb-0 pb-0 mt-5" id="hireme">HIRE ME</h1>
+            <h1 class="text-center fs-1 mb-0 pb-0 mt-5">HIRE ME</h1>
             <form
               name="contact-form"
               method="POST"
