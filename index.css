@@ -19,14 +19,18 @@ body {
   background-size: cover;
   background-position: center bottom;
 }
-#bg2 {
-  height: 100vh;
-  min-width: 100%;
-  display: flex;
+
+.bg2 {
+  height: 100vh; /* 100% of the viewport height */
+  min-width: 100%; /* Ensure the container covers the entire width */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   background: url(img/myexperience.jpeg) no-repeat fixed;
   background-size: cover;
   background-position: top;
 }
+
 #bg3 {
   height: 100vh;
   min-width: 100%;
@@ -56,9 +60,11 @@ body {
   background-position: center top;
 }
 #bg7 {
-  height: 100vh;
+  height: 110vh;
   min-width: 100%;
-  background: url(img/educ1.jpg) no-repeat;
+
+  align-items: center; /* Center vertically */
+  background: url(img/educ1.jpg) no-repeat fixed;
   background-size: cover;
   background-position: center top;
 }
@@ -67,15 +73,9 @@ body {
   min-width: 100%;
   background: url(img/educ2.jpg) no-repeat fixed;
   background-size: cover;
-  background-position: center top;
+  background-position: center;
 }
-#bg9 {
-  height: 100vh;
-  min-width: 100%;
-  background: url(img/skills.jpg) no-repeat;
-  background-size: cover;
-  background-position: center top;
-}
+
 .navbar {
   background-color: rgba(40, 38, 35, 0.757);
   position: fixed;
@@ -103,8 +103,37 @@ body {
   color: aqua !important;
 }
 
-.aboutme-container,
-.experience-container {
+@media screen and (max-width: 800px) {
+  #bg7 {
+    height: 120vh;
+  }
+}
+@media screen and (max-width: 505px) {
+  #bg7 {
+    height: 130vh;
+  }
+}
+@media screen and (max-width: 450px) {
+  #bg7 {
+    height: 140vh;
+  }
+}
+@media screen and (max-width: 400px) {
+  #bg7 {
+    height: 135vh;
+  }
+}
+@media screen and (max-width: 350px) {
+  #bg7 {
+    height: 125vh;
+  }
+}
+@media screen and (max-width: 300px) {
+  #bg7 {
+    height: 100vh;
+  }
+}
+.aboutme-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,64 +146,53 @@ body {
 .experience-container h1 {
   font-size: 5dvh;
   margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .about-text,
 .experience-text {
   background-color: rgba(0, 0, 0, 0.7);
   margin: 10%;
 }
-.education-container {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  text-align: start;
+.education-text {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  max-width: 80%;
+  max-height: 100dvw;
+  margin-left: auto; /* Set left margin to auto */
+  margin-right: auto; /* Set right margin to auto */
+  margin-top: 10%;
+  overflow: auto;
 }
-.education2-container {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  text-align: end;
-}
+
 .education-container h1 {
   font-size: 6.5dvh;
   margin: 5px;
 }
-.education-text {
+
+educ-text {
+  width: 90%; /* Adjust width as needed */
+  margin: 0 auto; /* Center horizontally */
+  padding: 20px; /* Add padding for better readability */
   background-color: rgba(0, 0, 0, 0.7);
-  margin: 10%;
 }
-#educ-text {
-  font-size: 2dvh;
+
+#educ2-text {
+  font-size: 2rem; /* Adjust font size as needed */
   color: white;
 }
 
 @media screen and (min-width: 771px) {
-  .educ2-text {
-    width: 90dvh;
-    margin-bottom: 10dvw;
-    margin-right: 10dvw;
-    margin-left: 10dvw;
-
-    background-color: rgba(0, 0, 0, 0.7);
+  .educ-text {
+    width: 90%;
   }
 }
-.educ-text {
-  width: 90dvh;
-  margin-bottom: 10dvw;
-  margin-right: 10dvw;
-  margin-left: 10dvw;
 
-  background-color: rgba(0, 0, 0, 0.7);
-}
 @media screen and (max-width: 770px) {
   .educ-text {
-    width: 80dvw;
-
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  #educ2-text {
-    font-size: 2dvh;
-    color: white;
+    width: 80%;
   }
 }
 h1 {
@@ -200,6 +218,7 @@ p {
 }
 .list-unstyled {
   color: white;
+  text-align: center;
 }
 .card {
   margin: 5% 0 5% 0;
@@ -226,8 +245,12 @@ a {
 .images:hover {
   transform: scale(1.1);
 }
-footer {
-  background-color: black;
+
+.hire-section {
+  min-height: 90vh;
+}
+.hire {
+  margin: 10% 0;
 }
 .form-control {
   background-color: rgba(0, 0, 0, 0.7);
@@ -258,7 +281,6 @@ sup {
 a:hover {
   color: aqua;
 }
-.skills,
-footer {
+.skills {
   min-height: 100vh;
 }

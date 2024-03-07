@@ -21,40 +21,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="index.css" />
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const sections = document.querySelectorAll(".container");
-        const navLinks = document.querySelectorAll(".nav-link");
-
-        function setActiveLink() {
-          let currentSectionId = "";
-
-          sections.forEach(function (section) {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= sectionTop - sectionHeight / 3) {
-              currentSectionId = section.getAttribute("id");
-            }
-          });
-
-          navLinks.forEach(function (link) {
-            const href = link.getAttribute("href").substring(1); // Remove the '#' from href
-            if (href === currentSectionId) {
-              link.classList.add("active");
-            } else {
-              link.classList.remove("active");
-            }
-          });
-        }
-
-        function handleScroll() {
-          requestAnimationFrame(setActiveLink);
-        }
-
-        window.addEventListener("scroll", handleScroll);
-      });
-    </script>
+    <script src="resume.js"></script>
 
     <title>Quiachon, John Paul - Resume</title>
   </head>
@@ -84,7 +51,7 @@
               <a class="nav-link nav-text" href="#bg1">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-text" href="#bg2">Experience</a>
+              <a class="nav-link nav-text" href="#experience">Experience</a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-text" href="#bg7">Education</a>
@@ -99,7 +66,9 @@
         </div>
       </div>
     </nav>
-    <div class="container container-fluid aboutme-container" id="bg1">
+
+    <!-- INTRO -->
+    <div class="container-fluid aboutme-container" id="bg1">
       <div class="row">
         <div class="col about-text">
           <h1>Greetings! I'm Paul</h1>
@@ -113,129 +82,73 @@
             Glad to have you here!
           </p>
           <a href="#hireme" class="btn btn-outline-dark">Hire me!</a>
-          <a href="#bg2" class="btn btn-outline-dark">About me</a>
+          <a href="#experience" class="btn btn-outline-dark">About me</a>
         </div>
       </div>
     </div>
-    <div class="container container-fluid experience-container" id="bg2">
-      <div class="row">
-        <div class="col experience-text">
-          <h1>Overview & Work Experience</h1>
-          <ul class="list-unstyled">
-            <li>
-              ➵ Demonstrated proficiency in delivering exceptional customer
-              service, managing inquiries, resolving issues promptly, and
-              ensuring high customer satisfaction.
-            </li>
-            <li>
-              ➵ Proven ability to efficiently oversee and optimize operational
-              processes, ensuring seamless workflow and achieving performance
-              targets within a BPO setting.
-            </li>
-            <li>
-              ➵ Extensive experience implementing and maintaining quality
-              assurance processes to uphold service standards and ensure
-              compliance with client requirements.
-            </li>
-            <li>
-              ➵ Skilled in building and maintaining strong client relationships,
-              understanding client needs, and delivering customized solutions to
-              meet their business objectives.
-            </li>
-            <li>
-              ➵ Adept at adapting to evolving business environments,
-              technological advancements, and changes in client requirements to
-              ensure continued success in BPO operations.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="container container-fluid experience-container" id="bg3">
-      <div class="row" id="#bg3">
-        <div class="col experience-text">
-          <h2>Technical Support Representative</h2>
-          <ul class="list-unstyled">
-            <p>February 2021 - November 2023</p>
 
-            <p>Teletech</p>
-            <p>Mall of Asia, Pasay</p>
-            <p>
-              As a technical representative, I consistently delivered
-              exceptional customer service by prioritizing urgent issues and
-              swiftly implementing practical solutions to resolve them promptly.
-              Understanding the critical nature of certain situations, I quickly
-              assessed priorities and took decisive action to address urgent
-              technical issues without delay. Leveraging my resourcefulness and
-              creativity, I developed innovative approaches to overcome
-              obstacles and ensure timely resolution for customers. This
-              proactive approach not only resolved immediate concerns but also
-              demonstrated responsiveness and dedication to meeting their
-              technical needs efficiently, ultimately enhancing overall customer
-              satisfaction.
-            </p>
+    <!-- END OF INTRO -->
+
+    <!-- EXPERIENCE -->
+    <div class="container-fluid experience-container" id="experience">
+      <div class="row justify-content-center bg2">
+        <div class="col-10 experience-text">
+          <h2 class="text-center">Technical Support Representative</h2>
+          <ul class="list-unstyled">
+            <li>
+              <p>February 2021 - November 2023</p>
+              <p>Teletech</p>
+              <p>Mall of Asia, Pasay</p>
+              <p>
+                As a technical representative, I consistently delivered
+                exceptional customer service by prioritizing urgent issues and
+                swiftly implementing practical solutions to resolve them
+                promptly. Understanding the critical nature of certain
+                situations, I quickly assessed priorities and took decisive
+                action to address urgent technical issues without delay.
+                Leveraging my resourcefulness and creativity, I developed
+                innovative approaches to overcome obstacles and ensure timely
+                resolution for customers. This proactive approach not only
+                resolved immediate concerns but also demonstrated responsiveness
+                and dedication to meeting their technical needs efficiently,
+                ultimately enhancing overall customer satisfaction.
+              </p>
+            </li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="container container-fluid experience-container" id="bg6">
-      <div class="row">
-        <div class="col experience-text">
-          <h2>Full-Stack Web Developer</h2>
-          <ul class="list-unstyled">
-            <p>November 2023 - February 2024</p>
-            <p>KodeGo</p>
-            <p>Remote</p>
-            <p>
-              I successfully completed an intensive Full-Stack Web Development
-              Bootcamp, where I honed proficiency in a range of programming
-              languages and frameworks including HTML, CSS, JavaScript, SQL,
-              Laravel, and other relevant tools. Independently, I developed the
-              SHOP I.O project, showcasing strong skills in HTML and CSS.
-              Additionally, I collaborated on the creation of the Fit Flex
-              project with a colleague, demonstrating expertise in Express API,
-              data handling, and incorporating design elements. Furthermore, I
-              contributed to the development of Halukay, an E-commerce website,
-              by collaborating with peers on database design. My efforts during
-              the bootcamp were recognized, as I won the award for Best in
-              Capstone project, reflecting my dedication and excellence in web
-              development.
-            </p>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <!-- END OF EXPERIENCE -->
+
+    <!-- EDUCATION -->
     <div class="container container-fluid education-container" id="bg7">
       <div class="row">
-        <div class="col-lg-4 col-10 education-text">
+        <div class="education-text">
           <h2>Senior High School</h2>
-          <ul class="list-unstyled">
-            <p id="educ-text">La Consolacion College - Binan</p>
-            <p id="educ-text">
-              I graduated from La Consolacion College - Binan with a senior high
-              school diploma, specializing in STEM (Science, Technology,
-              Engineering, and Mathematics). Throughout my academic journey, I
-              developed a strong foundation in these disciplines, honing my
-              analytical skills and problem-solving abilities. The rigorous
-              curriculum equipped me with the necessary knowledge and expertise
-              to approach complex challenges with confidence and adaptability.
-              Additionally, my education instilled in me a passion for
-              innovation and a commitment to lifelong learning, driving me to
-              continually seek opportunities to further expand my skills and
-              knowledge.
-            </p>
-          </ul>
+
+          <p>La Consolacion College - Binan</p>
+          <p>
+            I graduated from La Consolacion College - Binan with a senior high
+            school diploma, specializing in STEM (Science, Technology,
+            Engineering, and Mathematics). Throughout my academic journey, I
+            developed a strong foundation in these disciplines, honing my
+            analytical skills and problem-solving abilities. The rigorous
+            curriculum equipped me with the necessary knowledge and expertise to
+            approach complex challenges with confidence and adaptability.
+            Additionally, my education instilled in me a passion for innovation
+            and a commitment to lifelong learning, driving me to continually
+            seek opportunities to further expand my skills and knowledge.
+          </p>
         </div>
       </div>
-    </div>
-    <div class="container container-fluid education2-container" id="bg8">
-      <div class="row mt-5">
-        <div class="educ-text">
+
+      <div class="row education-text">
+        <div>
           <h2>Full-Stack Web Developer</h2>
           <ul class="list-unstyled">
-            <p id="educ2-text">KodeGo</p>
-            <p id="educ2-text">
+            <p>KodeGo</p>
+            <p>
               I successfully completed an intensive Full-Stack Web Development
               Bootcamp, where I honed proficiency in a range of programming
               languages and frameworks including HTML, CSS, JavaScript, SQL,
@@ -254,6 +167,10 @@
         </div>
       </div>
     </div>
+
+    <!-- END OF EDUCATION -->
+
+    <!-- PROJECTS -->
     <div class="container container-fluid skills" id="skills">
       <div class="row">
         <div class="col-md-4">
@@ -310,10 +227,17 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <img src="img/kodegocertificate.png" alt="" />
+      </div>
     </div>
-    <footer class="footer">
+
+    <!-- END OF PROJECTS -->
+
+    <!-- FOOTER -->
+    <footer class="hire-section">
       <div class="container container-fluid" id="hireme">
-        <div class="row">
+        <div class="row hire">
           <div class="col-md-4">
             <h1 class="text-center fs-1 mb-0 pb-0 mt-5">HIRE ME</h1>
             <form
@@ -420,5 +344,7 @@
         </div>
       </div>
     </footer>
+
+    <!-- END OF FOOTER -->
   </body>
 </html>
