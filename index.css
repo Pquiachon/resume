@@ -1,3 +1,4 @@
+/* BODY */
 html {
   scroll-behavior: smooth;
 }
@@ -5,12 +6,34 @@ body {
   font-family: "Exo", sans-serif;
   background-color: black;
 }
-#webname {
-  text-decoration: none;
-  color: white;
-  font-size: 2dvw;
-  font-style: italic;
+/* END OF BODY */
+
+/* NAVIGATION BAR */
+.navbar {
+  background-color: rgba(40, 38, 35, 0.757);
+  position: fixed;
+  min-width: 100%;
+  z-index: 10;
 }
+.nav-link {
+  color: white;
+  font-size: 15px;
+}
+.nav-link:hover {
+  color: aqua;
+  cursor: pointer;
+  border-top: 2px solid aqua;
+  border-bottom: 2px solid aqua;
+}
+.active {
+  font-weight: 500;
+  border-top: 2px solid aqua;
+  border-bottom: 2px solid aqua;
+  color: aqua !important;
+}
+/* END OF NAVIGATION BAR */
+
+/* BACKGROUND IMAGES */
 #bg1 {
   height: 100vh;
   min-width: 100%;
@@ -21,11 +44,11 @@ body {
 }
 
 .bg2 {
-  height: 100vh; /* 100% of the viewport height */
-  min-width: 100%; /* Ensure the container covers the entire width */
-  display: flex; /* Use flexbox */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  height: 100vh;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: url(img/myexperience.jpeg) no-repeat fixed;
   background-size: cover;
   background-position: top;
@@ -62,47 +85,11 @@ body {
 #bg7 {
   height: 110vh;
   min-width: 100%;
-
-  align-items: center; /* Center vertically */
+  align-items: center;
   background: url(img/educ1.jpg) no-repeat fixed;
   background-size: cover;
   background-position: center top;
 }
-#bg8 {
-  height: 100vh;
-  min-width: 100%;
-  background: url(img/educ2.jpg) no-repeat fixed;
-  background-size: cover;
-  background-position: center;
-}
-
-.navbar {
-  background-color: rgba(40, 38, 35, 0.757);
-  position: fixed;
-  min-width: 100%;
-  z-index: 10;
-}
-.nav-link {
-  color: white;
-  font-size: 15px;
-}
-.nav-link:hover {
-  color: aqua;
-  cursor: pointer;
-  border-top: 2px solid aqua;
-  border-bottom: 2px solid aqua;
-}
-#name {
-  float: left;
-  color: white;
-}
-.active {
-  font-weight: 500;
-  border-top: 2px solid aqua;
-  border-bottom: 2px solid aqua;
-  color: aqua !important;
-}
-
 @media screen and (max-width: 800px) {
   #bg7 {
     height: 120vh;
@@ -133,6 +120,22 @@ body {
     height: 100vh;
   }
 }
+#bg8 {
+  height: 100vh;
+  min-width: 100%;
+  background: url(img/educ2.jpg) no-repeat fixed;
+  background-size: cover;
+  background-position: center;
+}
+/* END OF BACKGROUND IMAGES */
+
+/* ABOUT ME & EXPERIENCE CONTAINER */
+.btn {
+  color: aqua;
+  border-color: aqua;
+  background-color: black;
+  margin: auto 5px;
+}
 .aboutme-container {
   display: flex;
   justify-content: center;
@@ -143,6 +146,11 @@ body {
   font-size: 6.5dvh;
   margin: 5px;
 }
+.about-text,
+.experience-text {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 10%;
+}
 .experience-container h1 {
   font-size: 5dvh;
   margin: 5px;
@@ -151,50 +159,26 @@ body {
   align-items: center;
   text-align: center;
 }
-.about-text,
-.experience-text {
-  background-color: rgba(0, 0, 0, 0.7);
-  margin: 10%;
-}
+/* END OF ABOUT ME & EXPERIENCE CONTAINER */
+
+/* EDUCATION CONTAINER */
 .education-text {
   background-color: rgba(0, 0, 0, 0.7);
   text-align: center;
   max-width: 80%;
   max-height: 100dvw;
-  margin-left: auto; /* Set left margin to auto */
-  margin-right: auto; /* Set right margin to auto */
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 10%;
   overflow: auto;
 }
-
 .education-container h1 {
   font-size: 6.5dvh;
   margin: 5px;
 }
+/* END OF EDUCATION CONTAINER */
 
-educ-text {
-  width: 90%; /* Adjust width as needed */
-  margin: 0 auto; /* Center horizontally */
-  padding: 20px; /* Add padding for better readability */
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-#educ2-text {
-  font-size: 2rem; /* Adjust font size as needed */
-  color: white;
-}
-
-@media screen and (min-width: 771px) {
-  .educ-text {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 770px) {
-  .educ-text {
-    width: 80%;
-  }
-}
+/* TEXT STYLES */
 h1 {
   display: block;
   margin: 4rem;
@@ -205,20 +189,19 @@ h2 {
 
   color: aqua;
 }
-
 p {
   font-size: 2dvh;
   color: white;
 }
-.btn {
-  color: aqua;
-  border-color: aqua;
-  background-color: black;
-  margin: auto 5px;
-}
 .list-unstyled {
   color: white;
   text-align: center;
+}
+/* END OF TEXT STYLE */
+
+/* PROJECTS */
+.skills {
+  min-height: 100vh;
 }
 .card {
   margin: 5% 0 5% 0;
@@ -245,7 +228,9 @@ a {
 .images:hover {
   transform: scale(1.1);
 }
+/* END OF PROJECTS */
 
+/* FOOTER */
 .hire-section {
   min-height: 90vh;
 }
@@ -271,16 +256,11 @@ label {
 input {
   color: white;
 }
-sup {
-  color: white;
-  font-size: 18px;
-}
-.list-unstyled a i {
-  font-size: 24px;
-}
 a:hover {
   color: aqua;
 }
-.skills {
-  min-height: 100vh;
+#name {
+  float: left;
+  color: white;
 }
+/* END OF FOOTER */
